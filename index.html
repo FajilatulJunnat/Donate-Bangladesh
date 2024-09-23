@@ -34,7 +34,7 @@
 <body class="font-Lexend">
    <!-- header -->
     <header class="sticky top-0 z-10 backdrop-filter backdrop-blur
-    dark:bg-primary dark:text-white">
+    ">
         <!-- navber -->
          <section class="bg-navcolor">
         <div class="navbar  container mx-auto pb-8">
@@ -47,19 +47,21 @@
             </div>
             <div class="navbar-end space-x-2">
             <img src="./assets/coin.png" alt="">
-           <p><span>5500</span> <span>BDT</span></p>
+           <p><span id="nav-amount">5500</span> <span>BDT</span></p>
             </div>
           </div>
         </section>
         <!-- button section -->
           <div class="flex justify-center items-center space-x-4  py-8">
-            <button class="btn btn-active bg-buttoncolor border-0 px-7">Donation</button>
-            <button class="btn btn-outline border-[#111111] border-opacity-30  px-7">History</button>
+            <button id="btn-donation" class="btn btn-outline   border-[#111111] border-opacity-30 bg-buttoncolor px-7">Donation</button>
+            <button id="btn-history" class="btn btn-outline border-[#111111] border-opacity-30   px-7">History</button>
           </div>
     </header>
    
-    <main class="container mx-auto">
+    <main class="container mx-auto min-h-96">
        <!-- card part -->
+        <section id="donation-section">
+          <!-- card-1 -->
       <div class="card grid lg:grid-cols-2 grid-cols-1 border p-4 my-6 mx-2 lg:mx-0">
         <div>
           <img
@@ -68,56 +70,105 @@
         <div class="card-body">
           <div class="space-x-2 flex items-center bg-[#111111] bg-opacity-5 rounded-lg p-4 lg:w-2/6 w-2/5">
             <img src="./assets/coin.png" alt="">
-           <p><span>0</span> <span>BDT</span></p>
+           <p><span id="total-donate">0</span> <span>BDT</span></p>
             </div>
           <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
           <p>The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
             </p>
-         <input type="text" name="" id="" placeholder="Write Donation Amount" class="border rounded-lg p-3">
-            <button class="btn bg-buttoncolor font-bold">Donate Now</button>
+         <input type="text" name="" id="donate-input" placeholder="Write Donation Amount" class="border rounded-lg p-3">
+         <button id="donate-now1" class="btn bg-buttoncolor font-bold" >Donate Now</button>
+         <dialog id="my_modal_1" class="modal">
+          <div class="modal-box items-center flex flex-col">
+            <img src="./assets/coin.png" alt="">
+            <h3 class="text-2xl font-bold">Congrates!</h3>
+            <p class="py-4">Yoy have donated for human kind</p>
+            <h4 class="font-semibold">Successfully</h4>
+            
+              <form method="dialog" class="mt-8">
+                <button id="close" class="btn">Close Information</button>
+              </form>
+           
+          </div>
+         </dialog>
        
         </div>
       </div>
+      <!-- card-2 -->
       <div class="card grid lg:grid-cols-2 grid-cols-1 border p-4 mx-2 lg:mx-0">
         <div>
           <img
-            src="./assets/noakhali.png" class="w-full">
+            src="./assets/feni.png" class="w-full">
           </div>
         <div class="card-body">
           <div class="space-x-2 flex items-center bg-[#111111] bg-opacity-5 rounded-lg p-4 lg:w-2/6 w-2/5">
             <img src="./assets/coin.png" alt="">
-           <p><span>0</span> <span>BDT</span></p>
+           <p><span id="total-donate2">600</span> <span>BDT</span></p>
             </div>
-          <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
-          <p>The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
-            </p>
-         <input type="text" name="" id="" placeholder="Write Donation Amount" class="border rounded-lg p-3">
-            <button class="btn bg-buttoncolor font-bold">Donate Now</button>
-       
+          <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh </h2>
+           <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+         <input type="text" name="" id="donate-input2" placeholder="Write Donation Amount" class="border rounded-lg p-3">
+         <button class="btn bg-buttoncolor font-bold" id="donate-now2">Donate Now</button>
+         <dialog id="my_modal_2" class="modal">
+          <div class="modal-box items-center flex flex-col">
+            <img src="./assets/coin.png" alt="">
+            <h3 class="text-2xl font-bold">Congrates!</h3>
+            <p class="py-4">Yoy have donated for human kind</p>
+            <h4 class="font-semibold">Successfully</h4>
+            
+              <form method="dialog" class="mt-8">
+                <button id="close2" class="btn">Close Information</button>
+              </form>
+           
+          </div>
+         </dialog>
         </div>
       </div>
+      <!-- card-3 -->
       <div class="card grid lg:grid-cols-2 grid-cols-1 border p-4 my-6 mx-2 lg:mx-0">
         <div>
           <img
-            src="./assets/noakhali.png" class="w-full">
+            src="./assets/quota-protest.png" class="w-full">
           </div>
         <div class="card-body">
           <div class="space-x-2 flex items-center bg-[#111111] bg-opacity-5 rounded-lg p-4 lg:w-2/6 w-2/5">
             <img src="./assets/coin.png" alt="">
-           <p><span>0</span> <span>BDT</span></p>
+           <p><span id="total-donate3">2400</span> <span>BDT</span></p>
             </div>
-          <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+          <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
           <p>The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
             </p>
-         <input type="text" name="" id="" placeholder="Write Donation Amount" class="border rounded-lg p-3">
-            <button class="btn bg-buttoncolor font-bold">Donate Now</button>
-       
+         <input type="text" name="" id="donate-input3" placeholder="Write Donation Amount" class="border rounded-lg p-3">
+          <!-- modal -->
+            <button class="btn bg-buttoncolor font-bold" id="donate-now3">Donate Now</button>
+<dialog id="my_modal_3" class="modal " >
+  <div class="modal-box items-center flex flex-col">
+    <img src="./assets/coin.png" alt="">
+    <h3 class="text-2xl font-bold">Congrates!</h3>
+    <p class="py-4">Yoy have donated for human kind</p>
+    <h4 class="font-semibold">Successfully</h4>
+    
+      <form method="dialog" class="mt-8">
+        <button id="close3" class="btn">Close Information</button>
+      </form>
+   
+  </div>
+</dialog>
         </div>
       </div>
+    </section>
+      <!-- history -->
+      <div id="history-section" class="hidden">
+        <h1 class="text-3xl ">Transection History</h1>
+        <div id="history-container">
+         
+        </div>
+       </div>
     </main>
-    <footer class="h-24 bg-navcolor mt-20">
+    <footer class="h-24 bg-navcolor mt-20 static bottom-0 ">
 
     </footer>
     <script src="./Js-function/blog.js"></script>
+    <script src="./Js-function/button-feature.js"></script>
+    <script src="./Js-function/donate.js"></script>
 </body>
 </html>
