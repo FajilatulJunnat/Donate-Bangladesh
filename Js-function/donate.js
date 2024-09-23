@@ -50,7 +50,16 @@ document.getElementById('donate-now2').addEventListener('click',function(){
     }
     else{
         document.getElementById("my_modal_2").showModal();
-        
+                 // tranjection history
+                 const heading2=GetHeading('head-2')
+                 const div2= document.createElement('div')
+                 div2.classList.add('border')
+                 div2.innerHTML =`
+                <p> ${addDonate2} Taka is doneted for ${heading2}</p>
+                       <p>Date: ${ new Date()}</p>
+                 `
+                 document.getElementById('history-container').appendChild(div2)
+                 // modal button
         document.getElementById('close2').addEventListener('click',function(){
             const updateAmount2=addDonate2 + availableDonate2;
             document.getElementById("total-donate2").innerText=updateAmount2
