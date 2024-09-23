@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/88125b6bbe.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisy ui + tailwind -->
+     
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'navcolor': '#F9F7F3',
+            'buttoncolor': '#B4F461'
+          },
+          fontFamily: {
+            Lexend:["Lexend"]
+                
+              }
+         
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+     <!-- navber -->
+     <section class="bg-navcolor">
+        <div class="navbar  container mx-auto pb-8">
+            <div class="navbar-start">
+                <button onclick="goBack()" class="btn btn-active bg-buttoncolor border-0 px-7">Home</button>
+            </div>
+            <div class="navbar-center space-x-3">
+             <img src="./assets/logo.png" alt="">
+             <h2 class="font-bold lg:text-xl">Donate Bangladesh</h2>
+            </div>
+            <div class="navbar-end space-x-2">
+            <img src="./assets/coin.png" alt="">
+           <p><span>5500</span> <span>BDT</span></p>
+            </div>
+          </div>
+        </section>
+        <!-- body -->
+         <section class="container my-10 mx-auto">
+            <h1 class="text-4xl font-bold mb-8">Important FAQ  <i class="fa-regular fa-circle-question"></i></h1>
+            <div class="collapse collapse-arrow rounded-none border">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow rounded-none border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select en element from the DOM?</div>
+                <div class="collapse-content">
+                  <p class="font-semibold">Select DOM Elements Using JavaScript</p>
+                  <li>  Introduction.</li>
+                    <li>Understanding the DOM as an Object Hierarchy.</li>
+                  <li>  Use an ID to Select an Element with .getElementById()</li>
+                    <li>Use a CSS Selector to Select an Element with .querySelector()</li>
+                    <li>Use a CSS Selector to Select Multiple Elements with .querySelectorAll()</li>
+                    <li>
+                        Other Ways to Select Elements.</li>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow rounded-none border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM ,and why it is useful?</div>
+                <div class="collapse-content">
+                  <p>Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow rounded-none border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and style using the DOM?</div>
+                <div class="collapse-content">
+                  <p>Changing an element's style (CSS) attributes is one of the ways in which the DOM can be used. For example, in the code below, the onfocus event handler method is used to change the element's style when the user clicks inside it. When this event occurs, the element's background color will change to purple</p>
+                </div>
+              </div>
+         </section>
+        <script src="./Js-function/blog.js"></script>
+</body>
+</html>

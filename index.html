@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisy ui + tailwind -->
+     
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'navcolor': '#F9F7F3',
+            'buttoncolor': '#B4F461'
+          },
+          fontFamily: {
+            Lexend:["Lexend"]
+                
+              }
+         
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-Lexend">
+   <!-- header -->
+    <header class="sticky top-0  backdrop-filter backdrop-blur
+    dark:bg-primary dark:text-white">
+        <!-- navber -->
+         <section class="bg-navcolor">
+        <div class="navbar  container mx-auto pb-8">
+            <div class="navbar-start">
+                <button id="blog-btn" class="btn btn-active bg-buttoncolor border-0 px-7">Blog</button>
+            </div>
+            <div class="navbar-center space-x-3">
+             <img src="./assets/logo.png" alt="">
+             <h2 class="font-bold lg:text-xl">Donate Bangladesh</h2>
+            </div>
+            <div class="navbar-end space-x-2">
+            <img src="./assets/coin.png" alt="">
+           <p><span>5500</span> <span>BDT</span></p>
+            </div>
+          </div>
+        </section>
+        <!-- button section -->
+          <div class="flex justify-center items-center space-x-4  py-8">
+            <button class="btn btn-active bg-buttoncolor border-0 px-7">Donation</button>
+            <button class="btn btn-outline border-[#111111] border-opacity-30  px-7">History</button>
+          </div>
+    </header>
+    <script src="./Js-function/blog.js"></script>
+</body>
+</html>
