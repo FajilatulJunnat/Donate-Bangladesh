@@ -22,7 +22,7 @@ document.getElementById('donate-now1').addEventListener('click',function(){
               <p>Date: ${ new Date()}</p>
         `
         document.getElementById('history-container').appendChild(div)
-        // modal button
+        // modal button1
         document.getElementById('close').addEventListener('click',function(){
     
             const updateAmount=addDonate + availableDonate;
@@ -59,7 +59,7 @@ document.getElementById('donate-now2').addEventListener('click',function(){
                        <p>Date: ${ new Date()}</p>
                  `
                  document.getElementById('history-container').appendChild(div2)
-                 // modal button
+                 // modal button2
         document.getElementById('close2').addEventListener('click',function(){
             const updateAmount2=addDonate2 + availableDonate2;
             document.getElementById("total-donate2").innerText=updateAmount2
@@ -86,7 +86,16 @@ document.getElementById('donate-now3').addEventListener('click',function(){
     }
     else{
         document.getElementById("my_modal_3").showModal();
-
+         // tranjection history
+         const heading3=GetHeading('head-3')
+         const div3= document.createElement('div')
+         div3.classList.add('border')
+         div3.innerHTML =`
+        <p> ${addDonate3} Taka is doneted for ${heading3}</p>
+               <p>Date: ${ new Date()}</p>
+         `
+         document.getElementById('history-container').appendChild(div3)
+         // modal button3
         document.getElementById('close3').addEventListener('click',function(){
             const updateAmount3=addDonate3 + availableDonate3;
             document.getElementById("total-donate3").innerText=updateAmount3
