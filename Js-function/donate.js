@@ -1,7 +1,4 @@
 
-
-
-
 // 
 document.getElementById('donate-now1').addEventListener('click',function(){
     const addDonate = GetInputValueById('donate-input')
@@ -16,7 +13,16 @@ document.getElementById('donate-now1').addEventListener('click',function(){
     }
     else{
         document.getElementById("my_modal_1").showModal();
-
+         // tranjection history
+         const heading=GetHeading('head-1')
+        const div= document.createElement('div')
+        div.classList.add('border')
+        div.innerHTML =`
+       <p> ${addDonate} Taka is doneted for ${heading}</p>
+              <p>Date: ${ new Date()}</p>
+        `
+        document.getElementById('history-container').appendChild(div)
+        // modal button
         document.getElementById('close').addEventListener('click',function(){
     
             const updateAmount=addDonate + availableDonate;
@@ -25,16 +31,6 @@ document.getElementById('donate-now1').addEventListener('click',function(){
             const navAmount=GetTextFieldById('nav-amount')
             const updateNavAmount =navAmount - addDonate;
             document.getElementById('nav-amount').innerText=updateNavAmount;
-
-            // tranjection history
-            const heading=GetHeading('head-1')
-     
-    const p= document.createElement('p')
-    p.innerText =`
-    ${addDonate} Taka is doneted for ${heading}
-    `
-    document.getElementById('history-container').appendChild(p)
-            
         })
     }
 })
@@ -54,7 +50,7 @@ document.getElementById('donate-now2').addEventListener('click',function(){
     }
     else{
         document.getElementById("my_modal_2").showModal();
-
+        
         document.getElementById('close2').addEventListener('click',function(){
             const updateAmount2=addDonate2 + availableDonate2;
             document.getElementById("total-donate2").innerText=updateAmount2
