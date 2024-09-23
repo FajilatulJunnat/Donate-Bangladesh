@@ -16,9 +16,9 @@ document.getElementById('donate-now1').addEventListener('click',function(){
          // tranjection history
          const heading=GetHeading('head-1')
         const div= document.createElement('div')
-        div.classList.add('border')
+        div.classList.add('border','p-4','rounded-lg','mb-3')
         div.innerHTML =`
-       <p> ${addDonate} Taka is doneted for ${heading}</p>
+       <p class="text-xl font-bold"> ${addDonate} Taka is doneted for ${heading}</p>
               <p>Date: ${ new Date()}</p>
         `
         document.getElementById('history-container').appendChild(div)
@@ -53,9 +53,9 @@ document.getElementById('donate-now2').addEventListener('click',function(){
                  // tranjection history
                  const heading2=GetHeading('head-2')
                  const div2= document.createElement('div')
-                 div2.classList.add('border')
+                 div2.classList.add('border','p-4','rounded-lg','mb-3')
                  div2.innerHTML =`
-                <p> ${addDonate2} Taka is doneted for ${heading2}</p>
+                <p class="text-xl font-bold"> ${addDonate2} Taka is doneted for ${heading2}</p>
                        <p>Date: ${ new Date()}</p>
                  `
                  document.getElementById('history-container').appendChild(div2)
@@ -89,9 +89,9 @@ document.getElementById('donate-now3').addEventListener('click',function(){
          // tranjection history
          const heading3=GetHeading('head-3')
          const div3= document.createElement('div')
-         div3.classList.add('border')
+         div3.classList.add('border','p-4','rounded-lg','mb-3')
          div3.innerHTML =`
-        <p> ${addDonate3} Taka is doneted for ${heading3}</p>
+        <p class="text-xl font-bold"> ${addDonate3} Taka is doneted for ${heading3}</p>
                <p>Date: ${ new Date()}</p>
          `
          document.getElementById('history-container').appendChild(div3)
