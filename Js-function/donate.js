@@ -1,14 +1,18 @@
 
-// 
+// card-1
 document.getElementById('donate-now1').addEventListener('click',function(){
     const addDonate = GetInputValueById('donate-input')
     const availableDonate =GetTextFieldById('total-donate')
+    const navAmount=GetTextFieldById('nav-amount')
     // check validation
     if (isNaN(addDonate)) {
         alert('Invalid Donation Amount')
         return
     }else if (addDonate<0) {
         alert('Invalid Donation Amount')
+        return
+    }else if (navAmount<addDonate) {
+        alert('insufficient money')
         return
     }
     else{
@@ -27,18 +31,18 @@ document.getElementById('donate-now1').addEventListener('click',function(){
     
             const updateAmount=addDonate + availableDonate;
             document.getElementById("total-donate").innerText=updateAmount
-        
-            const navAmount=GetTextFieldById('nav-amount')
+
             const updateNavAmount =navAmount - addDonate;
             document.getElementById('nav-amount').innerText=updateNavAmount;
         })
     }
 })
 
-
+// card-2
 document.getElementById('donate-now2').addEventListener('click',function(){
     const addDonate2 = GetInputValueById('donate-input2')
     const availableDonate2 =GetTextFieldById('total-donate2')
+    const navAmount=GetTextFieldById('nav-amount')
  
     // check validation
     if (isNaN(addDonate2)) {
@@ -46,6 +50,9 @@ document.getElementById('donate-now2').addEventListener('click',function(){
         return
     }else if (addDonate2<0) {
         alert('Invalid Donation Amount')
+        return
+    }else if (navAmount<addDonate2) {
+        alert('insufficient money')
         return
     }
     else{
@@ -64,24 +71,26 @@ document.getElementById('donate-now2').addEventListener('click',function(){
             const updateAmount2=addDonate2 + availableDonate2;
             document.getElementById("total-donate2").innerText=updateAmount2
         
-            const navAmount=GetTextFieldById('nav-amount')
             const updateNavAmount =navAmount - addDonate2;
             document.getElementById('nav-amount').innerText=updateNavAmount;
             
         })
     }
 })
-
+// card-3
 document.getElementById('donate-now3').addEventListener('click',function(){
     const addDonate3 = GetInputValueById('donate-input3')
     const availableDonate3 =GetTextFieldById('total-donate3')
- 
+    const navAmount=GetTextFieldById('nav-amount')
     // check validation
     if (isNaN(addDonate3)) {
         alert('Invalid Donation Amount')
         return
     }else if (addDonate3<0) {
         alert('Invalid Donation Amount')
+        return
+    }else if (navAmount<addDonate3) {
+        alert('insufficient money')
         return
     }
     else{
@@ -100,7 +109,6 @@ document.getElementById('donate-now3').addEventListener('click',function(){
             const updateAmount3=addDonate3 + availableDonate3;
             document.getElementById("total-donate3").innerText=updateAmount3
         
-            const navAmount=GetTextFieldById('nav-amount')
             const updateNavAmount =navAmount - addDonate3;
             document.getElementById('nav-amount').innerText=updateNavAmount;
             
